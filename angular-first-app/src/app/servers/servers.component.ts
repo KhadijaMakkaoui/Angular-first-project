@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   //select by attribute
   //selector: '[app-servers]',
   //select by class
-  selector: '.app-servers',
+  //selector: '.app-servers',
+  selector: 'app-servers',
   template: `
 <app-server></app-server>
 

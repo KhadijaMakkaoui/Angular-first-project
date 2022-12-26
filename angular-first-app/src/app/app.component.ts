@@ -12,4 +12,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-first-app';
+  allowNewServer= false;
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 }

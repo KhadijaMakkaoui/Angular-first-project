@@ -1,5 +1,6 @@
 package com.example.springboot_angular_employeeapp.service;
 
+import com.example.springboot_angular_employeeapp.exception.UserNotFoundException;
 import com.example.springboot_angular_employeeapp.model.Employee;
 import com.example.springboot_angular_employeeapp.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,6 @@ public class EmployeeService {
     public Employee findEmployeeById(Long id){
         return employeeRepo.findEmployeeById(id).orElseThrow(
                 ()->new UserNotFoundException("User by id "+id+" was not found")
-        );
         );
     }
     public void deleteEmployee(Long id){

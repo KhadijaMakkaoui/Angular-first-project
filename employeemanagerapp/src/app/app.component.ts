@@ -34,7 +34,7 @@ export class AppComponent implements OnInit{
    * @param employee - the employee to be added
    * @param mode - the mode of the modal(Add, Edit, Delete)
    */
-  public onOpenModal(mode: string): void {
+  public onOpenModal(mode: string,employee?:Employee): void {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
@@ -51,10 +51,26 @@ export class AppComponent implements OnInit{
       button.setAttribute('data-bs-target', '#deleteEmployeeModal');
     }
     //append the button to the container
-    // @ts-ignore
-    container.appendChild(button);
+    container?.appendChild(button);
     button.click();
 
   }
 
+  public onAddEmpoyee(addForm: NgForm):void {
+    const btn=document.getElementById('add-employee-form');
+    btn?.click();
+    this.employeeService.addEmployee(addForm.value).subscribe(
+      (response : Employee) => {
+        console.log(response);
+        this.getEmployees();
+        addForm.reset();
+      },
+      //handel the error
+      (error : HttpErrorResponse) => {
+          alert(error.message);
+          addForm.reset();
+      }
+    );
+
+  }
 }

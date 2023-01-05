@@ -11,7 +11,12 @@ export class RecepieListComponent implements OnInit{
     new Recepie('A Test Recepie',
       'This is simply a test',
       'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg'
-    )];
+    ),
+    new Recepie('A Test Recepie',
+      'This is simply a test',
+      'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg'
+    )
+  ];
   constructor() {
   }
   ngOnInit(): void {

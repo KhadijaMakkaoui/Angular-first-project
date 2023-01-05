@@ -1,4 +1,3 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <app-header></app-header>
 <div class="container">
   <div class="row">
@@ -7,6 +6,9 @@
       <app-shopping-list></app-shopping-list>
     </div>
   </div>
+</div>
+<!--
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Employee Manager</a>
@@ -27,14 +29,14 @@
 
 
       </ul>
-      <!--<form class="d-flex">
+      &lt;!&ndash;<form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>-->
+      </form>&ndash;&gt;
     </div>
   </div>
 </nav>
-<!--___________________________________-->
+&lt;!&ndash;___________________________________&ndash;&gt;
 <div class="container">
   <div class="row" id="main-container">
     <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
@@ -55,34 +57,34 @@
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
             <button (click)="onOpenModal('edit',employee)"  class="btn btn-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateEmployeeModal"><i class="fa fa-pencil"></i></button>
-<!--
+&lt;!&ndash;
             <a (click)="onOpenModal(employee,'edit')" class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
--->
+&ndash;&gt;
             <a (click)="onOpenModal('delete',employee)" class="btn btn-secondary tooltips" data-placement="top"  data-original-title="Delete"><i class="fa fa-times"></i></a>
           </div>
-         <!-- <ul class="social-links list-inline mb-0">
+         &lt;!&ndash; <ul class="social-links list-inline mb-0">
             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
-          </ul>-->
+          </ul>&ndash;&gt;
         </div>
       </div>
     </div>
 
   </div>
 </div>
-<!-- Button trigger modal -->
-<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+&lt;!&ndash; Button trigger modal &ndash;&gt;
+&lt;!&ndash;<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
-</button>-->
+</button>&ndash;&gt;
 
 
-<!-- Add Employee Modal -->
+&lt;!&ndash; Add Employee Modal &ndash;&gt;
 <div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addEmployeeModalLabel">Edit Employee<!-- {{ addEmpl oyee ?.name}}--></h5>
+        <h5 class="modal-title" id="addEmployeeModalLabel">Edit Employee&lt;!&ndash; {{ addEmpl oyee ?.name}}&ndash;&gt;</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -91,8 +93,8 @@
             <label for="name">Name</label>
             <input type="text" ngModel name="name" id="name" class="form-control" aria-describedby="emailHelp" placeholder="Name">
           </div>
-          <!--<input type="hidden"  name="id" class="form-control" placeholder="Email">
-          <input type="hidden"  name="userCode" class="form-control" placeholder="Email">-->
+          &lt;!&ndash;<input type="hidden"  name="id" class="form-control" placeholder="Email">
+          <input type="hidden"  name="userCode" class="form-control" placeholder="Email">&ndash;&gt;
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" ngModel name="email" id="email" class="form-control" placeholder="Email">
@@ -112,19 +114,20 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" id="add-employee-form" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button  type="submit" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button  type="submit" id="add-employee-form" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 <!-- Edit Modal -->
+<!--
 <div class="modal fade" id="updateEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeEditModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee<!-- {{ editEmpl oyee ?.name}}--></h5>
+        <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee&lt;!&ndash; {{ editEmpl oyee ?.name}}&ndash;&gt;</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -160,43 +163,44 @@
     </div>
   </div>
 </div>
+-->
 
 
 <!-- Delete Modal -->
-<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
+<!--<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="deleteModelLabel">Delete Employee</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-     <!-- <div class="modal-header">
+     &lt;!&ndash; <div class="modal-header">
         <h5 class="modal-title" id="deleteModelLabel">Delete Employee</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>-->
+      </div>&ndash;&gt;
       <div class="modal-body">
-<!--
+&lt;!&ndash;
         <p>Are you sure you want to delete employee {{delet eEmployee?.name}}?</p>
--->
+&ndash;&gt;
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-<!--
+&lt;!&ndash;
           <button (click)="onDel eteEmloyee (de leteEmployee?.id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
--->
+&ndash;&gt;
         </div>
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 <!-- Notification for no employees -->
-<div *ngIf="employees?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+<!--<div *ngIf="employees?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
   <div class="alert alert-info" role="alert">
     <h4 class="alert-heading">NO EMPLOYEES!</h4>
     <p>No Employees were found.</p>
 
-  </div>
+  </div></div>-->
 
-</div>
+

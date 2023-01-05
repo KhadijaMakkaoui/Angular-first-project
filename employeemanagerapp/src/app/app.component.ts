@@ -3,6 +3,7 @@ import {Employee} from "./employee";
 import {EmployeeService} from "./employee.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import { NgForm } from '@angular/forms';
+import {error} from "@angular/compiler-cli/src/transformers/util";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -59,17 +60,24 @@ export class AppComponent implements OnInit{
   public onAddEmpoyee(addForm: NgForm):void {
     const btn=document.getElementById('add-employee-form');
     btn?.click();
-    this.employeeService.addEmployee(addForm.value).subscribe(
-      (response : Employee) => {
+    this.employeeService.addEmployee(addForm.value).subscribe({
+      next: (response) => {
         console.log(response);
         this.getEmployees();
         addForm.reset();
       },
+      error: (error) => {
+        alert(error.message);
+        addForm.reset();
+      }
+    }
+      /*(response : Employee) => {
+
+      },
       //handel the error
       (error : HttpErrorResponse) => {
-          alert(error.message);
-          addForm.reset();
-      }
+
+      }*/
     );
 
   }

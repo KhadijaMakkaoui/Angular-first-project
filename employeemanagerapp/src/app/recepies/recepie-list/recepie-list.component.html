@@ -4,20 +4,7 @@
     </div>
   <hr>
     <div class="col-xs-12">
-      <a href="#"
-         class="list-group-item clearfix"
-         *ngFor="let recepie of recepies">
-        <div class="card"  style="width: 18rem;">
-          <img [src]="recepie.imagePath" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{recepie.name}}</h5>
-            <p class="card-text">{{recepie.description}}</p>
-          </div>
-        </div>
-
-      </a>
-
-
+      <app-recepie-item *ngFor="let recepieElement of recepies" [recepie]="recepieElement"></app-recepie-item>
       <app-recepie-item></app-recepie-item>
     </div>
 </div>

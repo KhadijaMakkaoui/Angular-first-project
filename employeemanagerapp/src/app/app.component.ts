@@ -9,17 +9,21 @@ import {error} from "@angular/compiler-cli/src/transformers/util";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'employeemanagerapp';
-  public employees: Employee[] =[];
+export class AppComponent{
+  title = 'recepieApp';
+  loadedFeature = 'recepie';
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+ /* public employees: Employee[] =[];
   constructor(private employeeService: EmployeeService) {
 
-  }
+  }*/
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.getEmployees();
-  }
-  public getEmployees(): void {
+  }*/
+ /* public getEmployees(): void {
     this.employeeService.getEmployees().subscribe(
       (response: Employee[]) => {
         this.employees = response;
@@ -28,14 +32,14 @@ export class AppComponent implements OnInit{
         alert(error.message);
       }
     );
-  }
+  }*/
 
   /**
    * This method will open the proper modal
    * @param employee - the employee to be added
    * @param mode - the mode of the modal(Add, Edit, Delete)
    */
-  public onOpenModal(mode: string,employee?:Employee): void {
+ /* public onOpenModal(mode: string,employee?:Employee): void {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
@@ -71,14 +75,16 @@ export class AppComponent implements OnInit{
         addForm.reset();
       }
     }
-      /*(response : Employee) => {
+      /!*(response : Employee) => {
 
       },
       //handel the error
       (error : HttpErrorResponse) => {
 
-      }*/
+      }*!/
     );
 
   }
+*/
+
 }

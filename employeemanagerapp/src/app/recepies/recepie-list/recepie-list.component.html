@@ -4,7 +4,10 @@
     </div>
   <hr>
     <div class="col-xs-12">
-      <app-recepie-item *ngFor="let recepieElement of recepies" [recepie]="recepieElement"></app-recepie-item>
+      <app-recepie-item
+        *ngFor="let recepieElement of recepies"
+        [recepie]="recepieElement"
+       (recipeSelected)="onRecipeSelected(recepieElement)" ></app-recepie-item>
       <app-recepie-item></app-recepie-item>
     </div>
 </div>

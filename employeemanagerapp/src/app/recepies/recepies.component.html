@@ -1,7 +1,13 @@
 <div class="row">
   <div class="col-5"></div>
-    <app-recepie-list></app-recepie-list>
+    <app-recepie-list
+    (recipeWasSelected)="selectedRecepie=$event"></app-recepie-list>
   <div class="col-7">
-    <app-recepie-detail></app-recepie-detail>
+    <app-recepie-detail
+    *ngIf="selectedRecepie; else noRecepieSelected"
+    [recepieDetail]="selectedRecepie"></app-recepie-detail>
+    <ng-template #noRecepieSelected>
+      <h1>Please select a recepie</h1>
+    </ng-template>
   </div>
 </div>
